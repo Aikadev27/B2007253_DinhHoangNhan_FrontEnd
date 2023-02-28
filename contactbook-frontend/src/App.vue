@@ -1,11 +1,23 @@
 <template>
-  <h1>hello vuejs</h1>
+  <div id="app">
+    <AppHeader />
+    <div class="container mt-3">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <script>
+import AppHeader from "@/components/AppHeader.vue";
 export default {
   name: "app",
+  components: { AppHeader },
 };
 </script>
 
-<style></style>
+<style>
+.page {
+  max-width: 400px;
+  margin: auto;
+}
+</style>
